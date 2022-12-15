@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  /* colours, I ended up only using a couple after the final design polish */
+  --grey: #eceef3;
+  --blue: #eaf7fe;
+  --yellow: #fdf9ed;
+  --green: #edf9f8;
+  --purple: #f1eff8;
+  --pink: #fceefe;
+  --navy: #ecf0f8;
+
+  --dark-theme: #1c1b22;
+  --light-theme: #e1f5ff;
+}
+
+body {
+  background-color: var(--light-theme);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.landing {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../image-assets/milad-fakurian-PGdW_bHDbpI-unsplash.jpg);
+  background-size: cover;
+}
+
+h1,
+.landing p,
+.landing a {
+  margin-top: 0vw;
+  margin-left: 10vw;
+}
+
+h1 {
+  padding-top: 33vh;
+  font-size: 6rem;
+  font-family: "Chewy", cursive; /* Added from Google Fonts*/
+}
+
+.landing p {
+  font-size: 2rem;
+  width: 75vw;
+  font-family: "Solway", serif; /* Added from Google Fonts*/
+}
+
+.tiles {
+  margin-top: 2vw;
+  display: flex;
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.intro,
+.autoplay,
+.guardian,
+.form,
+.toggle,
+.medium,
+.spotify,
+.download,
+.joy {
+  border-radius: 1rem;
+  background-color: var(--grey);
+  border: 4px solid skyblue;
+  margin-top: 4%;
+  margin-right: 2.5%;
+  width: 18rem;
+  height: 30rem;
+}
+
+.boxTitle {
+  height: 5rem;
+  background-color: skyblue;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  color: var(--dark-theme);
+}
+
+footer {
+  margin-top: 4vw;
+  background-color: var(--yellow);
+  width: 100vw;
+  height: 25vh;
+}
+
+footer p {
+  margin-left: 10vw;
+}
+
+.intro {
+  background-color: var(--blue);
+}
+
+.intro h3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.intro p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.autoplay {
+  background-color: var(--green);
+  background-image: url(../video-assets/poster.png);
+  background-position: center;
+  background-size: 150%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The below is used to define break points to optimise the appearance of the site 
+for various device sizes, such as TV, desktop, tablet and mobile */
+
+@media (max-width: 750px) {
+  video {
+    display: none;
+  }
+}
+
+/* The above prevents video from showing in mobile size and a static image appears instead to speed up load time */
+
+.autoplay h3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+/* The above shows a title over the background-image. 
+For larger screens, there's a video overlay covering the whole tile */
+
+.autoplay p {
+  display: block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: white;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background-color: black;
+  padding: 0.5rem;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18rem;
+}
+
+.guardian {
+  background-color: var(--blue);
+}
+
+.guardian h3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.guardian p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.ReadMore {
+  margin-left: 1rem;
+  display: none;
+}
+
+/* The code below is needed so the Read More link only appears when an article loads. */
+
+.ReadMore.show {
+  display: inline;
+}
+
+/* End of code */
+
+.guardian button {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.form {
+  background-color: var(--blue);
+}
+
+.form h3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.form p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.submitButton {
+  margin-top: 1rem;
+}
+
+.toggle {
+  background-color: var(--pink);
+}
+
+.align {
+  display: flex;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.toggle h3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.toggle p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.dark {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: darkred;
+}
+
+.light {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: pink;
+  margin-left: auto;
+}
+
+.medium {
+  background-color: var(--blue);
+}
+
+li {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.spotify {
+  background-color: var(--yellow);
+}
+
+.download {
+  background-color: var(--green);
+  background-image: url(../image-assets/li-zhang-K-DwbsTXliY-unsplash.jpg);
+  background-size: 350%;
+  position: relative;
+}
+
+.download h3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.downloadfile {
+  background-color: pink;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 7rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  color: var(--dark-theme);
+  text-decoration: underline;
+  border: 0.5rem darkred double;
+}
+
+.joy {
+  background-color: var(--blue);
+}
+
+footer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../image-assets/simon-lee-zft-W1kVEhg-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer p {
+  color: white;
+  font-family: "Solway", serif;
+  font-size: 2rem;
+  padding-top: 50vh;
+}
+
+body.dark-theme {
+  background-color: var(--dark-theme);
+}
+
+form {
+  margin-left: 1rem;
+}
+
+.joy p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 14rem;
+}
+
+.medium h3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.smile {
+  text-align: center;
+  margin-top: -1rem;
+}

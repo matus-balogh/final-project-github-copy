@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Implemented 3p analytics tracking, 30 day trial with Plausible.io -->
+
+    <script
+      defer
+      data-domain="ga-project"
+      src="https://plausible.io/js/script.js"
+    ></script>
+
+    <!-- Typeface added from Google Font, code copied over -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Solway&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- End of Google Fonts code -->
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <title>Funtiler</title>
+    <link rel="icon" type="image/x-icon" href="./image-assets/favicon.png" />
+  </head>
+
+  <body id="colorChange">
+    <div class="landing">
+      <h1>Funtiler</h1>
+      <p>
+        Tiles I had fun making. <br />
+        <br />
+        Storing my front end knowledge in a neat format.
+      </p>
+    </div>
+
+    <main>
+      <div class="tiles">
+        <div class="intro" class="tile">
+          <div class="boxTitle">
+            <h3>JavaScript dad joke</h3>
+          </div>
+          <p>
+            Question: <br />
+            How do you comfort a JavaScript bug? <br />
+            <br />
+            Answer: <br />You console it.
+          </p>
+        </div>
+
+        <div class="autoplay" class="tile">
+          <div class="boxTitle">
+            <h3>Access site via desktop to watch the video</h3>
+          </div>
+          <video
+            id="background-video"
+            autoplay
+            loop
+            muted
+            src="./video-assets/mixkit-portrait-of-a-woman-in-a-pool-1259.mp4"
+          ></video>
+        </div>
+
+        <div class="guardian" class="tile">
+          <div class="boxTitle">
+            <h3>Lastest news from the Guardian</h3>
+          </div>
+          <button class="GetLatestHeadline">Get latest headline</button>
+          <!-- Fetch Guardian API
+          Source URL: https://content.guardianapis.com/search?api-key=3de54b58-84ac-4405-a006-649614850382
+          Documentation: http://open-platform.theguardian.com/documentation/
+          Access key: "3de54b58-84ac-4405-a006-649614850382"
+        -->
+
+          <!-- The below displays the headline once you pull it from the Guardian API -->
+          <p class="HeadlineFromGuardian">Headline magically appears</p>
+
+          <!-- The below will take you to the article URL -->
+          <a href="#" class="ReadMore"> Read More</a>
+        </div>
+
+        <div class="form" class="tile">
+          <div class="boxTitle">
+            <h3>Subscribe to our updates</h3>
+          </div>
+          <p>Enter your email address below:</p>
+
+          <!-- The code below is the minumum code needed to capture input from one field. It then sends the information to Formspree. Formspree works with the data further - on my free version it sends me an email, on a paid version I could start sending data to 3p such as a Google Sheet or marketing automation tools -->
+
+          <form action="https://formspree.io/f/xgeqbjkg" method="post">
+            <label for="email">Your Email</label>
+            <input name="Email" id="email" type="email" />
+            <button type="submit" class="submitButton">Submit</button>
+          </form>
+        </div>
+
+        <!-- End of form -->
+
+        <div class="toggle" class="tile">
+          <div class="boxTitle">
+            <h3>Switch between dark <br />and light theme</h3>
+          </div>
+          <p>Click on the dark or light circle below to toggle</p>
+          <div class="align">
+            <div id="dark-button" class="dark"></div>
+            <div id="light-button" class="light"></div>
+          </div>
+          <div class="smile">
+            <img
+              src="./image-assets/smile.png"
+              alt="Yellow curve to indicate a smile"
+            />
+          </div>
+        </div>
+
+        <div class="medium" class="tile">
+          <div class="boxTitle">
+            <h3>Easy access to a list of <br />my old Medium articles</h3>
+          </div>
+          <ul>
+            <li>
+              <a
+                href="https://medium.com/@matusbalogh/a-dead-simple-guide-for-startups-starting-with-sales-6fe0598e4ce8"
+                >A Dead Simple Guide For Startups Scaling Sales
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@matusbalogh/how-i-sold-my-first-e-commerce-business-d4fe45e107d4"
+                >How I Sold My First E-commerce Business
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@matusbalogh/20-steps-to-launching-your-own-direct-to-consumer-e-commerce-company-c80642b07b03"
+                >20 Steps to Launching Your Direct-to-Consumer E-commerce
+                Company
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="spotify" class="tile">
+          <!-- Iframe from Spotify, to embed an album on my website. You can change the width and height of the player to fit your container -->
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/album/6hPkbAV3ZXpGZBGUvL6jVM?utm_source=generator&theme=0"
+            width="280"
+            height="472"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="download" class="tile">
+          <div class="boxTitle">
+            <h3>Beautiful wallpaper inspired by paper folds</h3>
+          </div>
+          <a
+            href="./image-assets/li-zhang-K-DwbsTXliY-unsplash.jpg"
+            download
+            class="downloadfile"
+            >Download Wallpaper</a
+          >
+        </div>
+
+        <div class="joy" class="tile">
+          <p>To be continued...</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        © Matus Balogh, <br />
+        all rights reserved.
+      </p>
+    </footer>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
